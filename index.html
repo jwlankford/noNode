@@ -5,13 +5,22 @@
     <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     </head>
 <body>
-<script type="text/babel">
-ReactDOM.render(
-<h1>Hello World</h1>,
-document.body
-);
-</script>
+    <script type="text/babel">
+        function Test()
+        {
+            const bla=()=>{alert("Hello React")}
+            return <button onClick={bla}>Click Me</button>
+        }
+        class Hello extends React.Component{
+            render()
+            {
+              return <div>Hello React code <Test /></div>  
+            }
+        }
+        ReactDOM.render(<Hello />,document.getElementById('mydiv'))
+        </script>
 </body>
 </html>
